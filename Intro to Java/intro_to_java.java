@@ -45,6 +45,7 @@ public class intro_to_java {
         System.out.println("");
         int add = int_number + int_number2;
 
+        System.out.println("");
         System.out.println("Summing them both: " + int_number + " + " + int_number2 + " = " + add );
         System.out.println("");
     }
