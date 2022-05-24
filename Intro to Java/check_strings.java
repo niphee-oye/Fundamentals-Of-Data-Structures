@@ -17,6 +17,6 @@ public class check_strings {
 
         boolean check = f_string.equals(s_string);
         System.out.println("The two strings are the same: " + check);
-        System.out.println(" ");
+        System.out.println("");
     }
 }
