@@ -10,12 +10,16 @@ public class kevin_to_fahrenheit {
         System.out.println("Welcome to the Kevin to Fahrenheit converter.");
         System.out.print("Enter the known temperature in Kevin: ");
         System.out.print("");
-        Scanner temp_input = new Scanner(System.in);
-        String temperature = temp_input.nextLine();
-        double temperature_flt = Double.parseDouble(temperature);
+        try (Scanner temp_input = new Scanner(System.in)) {
+            String temperature = temp_input.nextLine();
+            double temperature_flt = Double.parseDouble(temperature);
 
-        double fahr = (((temperature_flt - 273.15)*(1.8)) + 32);
-        System.out.print("The equivalent temperature in Fahrenheit is: " + fahr + " degrees fahrenheit.");
+            double fahr = (((temperature_flt - 273.15)*(1.8)) + 32);
+            System.out.print("The equivalent temperature in Fahrenheit is: " + fahr + " degrees fahrenheit.");
+        } catch (NumberFormatException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         System.out.print("");
     }
 }
